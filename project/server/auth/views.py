@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 # project/server/auth/views.py
 
 
+=======
+>>>>>>> jwt-auth
 from flask import Blueprint, request, make_response, jsonify
 from flask.views import MethodView
 
@@ -26,6 +29,10 @@ class RegisterAPI(MethodView):
                     email=post_data.get('email'),
                     password=post_data.get('password')
                 )
+<<<<<<< HEAD
+=======
+
+>>>>>>> jwt-auth
                 # insert the user
                 db.session.add(user)
                 db.session.commit()
@@ -179,6 +186,11 @@ class LogoutAPI(MethodView):
             return make_response(jsonify(responseObject)), 403
 
 # define the API resources
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> jwt-auth
 registration_view = RegisterAPI.as_view('register_api')
 login_view = LoginAPI.as_view('login_api')
 user_view = UserAPI.as_view('user_api')

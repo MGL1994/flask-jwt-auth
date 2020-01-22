@@ -1,8 +1,13 @@
 # project/server/models.py
 
+<<<<<<< HEAD
 
 import jwt
 import datetime
+=======
+import datetime
+import jwt
+>>>>>>> jwt-auth
 
 from project.server import app, db, bcrypt
 
@@ -47,7 +52,11 @@ class User(db.Model):
     @staticmethod
     def decode_auth_token(auth_token):
         """
+<<<<<<< HEAD
         Validates the auth token
+=======
+        Decodes the auth token
+>>>>>>> jwt-auth
         :param auth_token:
         :return: integer|string
         """
